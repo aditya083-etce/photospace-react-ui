@@ -9,9 +9,9 @@ export default function Hero() {
     <section id="home" className="hero" aria-roledescription="carousel" aria-label="Photospace highlights">
       <div className="banner">
         <button className="arrow prev" onClick={() => go(-1)} aria-label="Previous slide">&lt;</button>
-        <div>
+        <div className="banner" style={{ backgroundImage: `url(${SLIDES[index].image})` }}>
           <h1 className="brand">PHOTOSPACE</h1>
-          <p className="tagline" aria-live="polite">{SLIDES[index]}</p>
+          <p className="tagline" aria-live="polite">{SLIDES[index].title}</p>
         </div>
         <button className="arrow next" onClick={() => go(1)} aria-label="Next slide">&gt;</button>
       </div>
